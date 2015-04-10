@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <title>Survey Builder</title>
+<head>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  
+  <!-- survey-question [question]="Question???" [index]="i" (delete)="onDelete()"></survey-question -->
+  <!-- survey-header [header]="header"></survey-header> -->
+  <survey-builder-app>
+    Loading...
+  </survey-builder-app>
+  
+  <div>
+  <p>
+    <em>
+    Submit seems to work.
+    Add Question causes an exception:
+    </em>
+  </p>
+  
+<pre>
+NoSuchMethodError: method not found: 'subscribe'
+Receiver: Instance of '_BroadcastStream'
+Arguments: [Closure: (dynamic) => dynamic]
+STACKTRACE:
+#0      Object._noSuchMethod (dart:core-patch/object_patch.dart:42)
+#1      Object.noSuchMethod (dart:core-patch/object_patch.dart:45)
+#2      SurveyBuilder.addQuestion (http://localhost:8082/survey_builder.dart:65:56)
+#3      _LocalInstanceMirror._invoke (dart:mirrors-patch/mirrors_impl.dart:546)
+#4      _LocalInstanceMirror.invoke (dart:mirrors-patch/mirrors_impl.dart:542)
+#5      ReflectionCapabilities.method.<anonymous closure> (package:angular2/src/reflection/reflection_capabilities.dart:86:33)
+#6      MethodCall.eval (package:angular2/src/change_detection/parser/ast.dart:312:21)
+#7      ASTWithSource.eval (package:angular2/src/change_detection/parser/ast.dart:347:25)
+#8      ProtoView.buildEventHandler.<anonymous closure>.<anonymous closure> (package:angular2/src/core/compiler/view.dart:476:20)
+#9      MapWrapper.forEach.<anonymous closure> (package:angular2/src/facade/collection.dart:46:27)
+#10     _HashMap.forEach (dart:collection-patch/collection_patch.dart:148)
+#11     MapWrapper.forEach (package:angular2/src/facade/collection.dart:46:14)
+#12     ProtoView.buildEventHandler.<anonymous closure> (package:angular2/src/core/compiler/view.dart:468:27)
+#13     ProtoView._instantiate.<anonymous closure>.<anonymous closure> (package:angular2/src/core/compiler/view.dart:448:22)
+#14     DomEventsPlugin.sameElementCallback.<anonymous closure>.<anonymous closure> (package:angular2/src/core/events/event_manager.dart:73:25)
+#15     _rootRun (dart:async/zone.dart:895)
+#16     _ZoneDelegate.run (dart:async/zone.dart:501)
+#17     _onRun.<anonymous closure> (package:angular2/src/core/zone/vm_turn_zone.dart:76:67)
+#18     VmTurnZone._onRunBase (package:angular2/src/core/zone/vm_turn_zone.dart:61:16)
+#19     _onRun (package:angular2/src/core/zone/vm_turn_zone.dart:76:26)
+#20     _CustomZone.run (dart:async/zone.dart:796)
+#21     VmTurnZone.run (package:angular2/src/core/zone/vm_turn_zone.dart:31:38)
+#22     DomEventsPlugin.sameElementCallback.<anonymous closure> (package:angular2/src/core/events/event_manager.dart:72:17)
+
+Exception: Class '_BroadcastStream' has no instance method 'subscribe'.
+
+NoSuchMethodError: method not found: 'subscribe'
+Receiver: Instance of '_BroadcastStream'
+Arguments: [Closure: (dynamic) => dynamic] (package:angular2/src/core/life_cycle/life_cycle.dart:19)
+</pre>
+</div>
+
+  <script type="application/dart" src="main.dart"></script>
+  <script data-pub-inline src="packages/browser/dart.js"></script>
+</body>
+</html>
+
